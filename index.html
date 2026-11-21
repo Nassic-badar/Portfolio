@@ -4,524 +4,319 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Muhammad Nassic Badar — React.js Developer | Frontend Engineer</title>
+    <meta name="description" content="Portfolio of Muhammad Nassic Badar, a frontend & React.js developer from Pakistan crafting clean, fast, accessible websites and single-page applications with modern web technologies.">
+    <meta name="keywords" content="Muhammad Nassic Badar, Nassic Badar, React developer, frontend developer, web developer, portfolio, Pakistan, JavaScript, Node.js">
+    <meta name="author" content="Muhammad Nassic Badar">
+    <meta name="theme-color" content="#050816">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2300f5ff'/><stop offset='1' stop-color='%237c3aed'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='%23050816'/><text x='50' y='72' font-size='58' text-anchor='middle' fill='url(%23g)' font-family='Arial Black, sans-serif' font-weight='900'>N</text></svg>">
+    <link rel="canonical" href="https://nassic-badar.github.io/Portfolio/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Muhammad Nassic Badar — React.js Developer">
+    <meta property="og:description" content="Frontend & React.js developer crafting clean, fast, accessible web experiences.">
+    <meta property="og:url" content="https://nassic-badar.github.io/Portfolio/">
+    <meta property="og:image" content="https://nassic-badar.github.io/Portfolio/img/hero.png">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body class="main-content">
-    <header class="container header active" id="home">
-        <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape"></div>
-                <div class="image">
-                    <img src="img/hero.png" alt="">
-                </div>
-            </div>
-            <div class="right-header">
-                <h1 class="name">
-                    Hi, I'm <span>Muhammad Nasic Badar.</span>
-                    React.Js Developer.
-                </h1>
-                <p>
-                     I  can create clean, fast and accessible websites and SPA (single page applications) using appropriate front-end technologies and techniques.
-                </p>
-                <div class="btn-con">
-                    <a href="Resume.pdf" class="main-btn">
-                        <span class="btn-text">Re§umé</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                </div>
+<body>
+
+    <!-- Ambient layers -->
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="aurora" aria-hidden="true">
+        <div class="aurora-blob aurora-1"></div>
+        <div class="aurora-blob aurora-2"></div>
+        <div class="aurora-blob aurora-3"></div>
+    </div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- ══════════ NAV ══════════ -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#home" class="logo magnetic" aria-label="Home">
+                <span class="logo-mark">N</span>
+                <span class="logo-text">nassic<em>.dev</em></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-section="home"><span class="nav-num">01</span>Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about"><span class="nav-num">02</span>About</a></li>
+                <li><a href="#portfolio" class="nav-link" data-section="portfolio"><span class="nav-num">03</span>Work</a></li>
+                <li><a href="#blogs" class="nav-link" data-section="blogs"><span class="nav-num">04</span>Blog</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact"><span class="nav-num">05</span>Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle magnetic" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="Resume.pdf" class="btn btn-small btn-ghost magnetic" download>
+                    <span>Resume</span><i class="fa-solid fa-download"></i>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
-    </header>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <ul>
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#portfolio" class="mobile-link">Work</a></li>
+            <li><a href="#blogs" class="mobile-link">Blog</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <a href="Resume.pdf" class="btn btn-primary" download><span>Download Resume</span><i class="fa-solid fa-arrow-down"></i></a>
+    </div>
+
     <main>
-        <section class="container about" id="about">
-            <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
-            </div>
-            <div class="about-container">
-                <div class="left-about">
-                    <h4>Information About me</h4>
-                    <p>
-                        I'm a very ambitious front-end developer looking for a role in an
-                        established IT company with the opportunity to work with the latest
-                        technologies on challenging and diverse projects.
+        <!-- ══════════ HERO ══════════ -->
+        <header class="hero" id="home">
+            <div class="hero-inner container">
+                <div class="hero-copy">
+                    <div class="hero-badge reveal-up">
+                        <span class="pulse-dot"></span>
+                        <span class="mono">Available for opportunities</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="line-mask"><span class="line">Hi, I'm</span></span>
+                        <span class="line-mask"><span class="line gradient-text">Nassic Badar</span></span>
+                    </h1>
+                    <h2 class="hero-role">
+                        <span class="mono prompt">&gt;</span>
+                        <span id="typedRole" class="typed"></span><span class="caret">▌</span>
+                    </h2>
+                    <p class="hero-sub reveal-up">
+                        I build <strong>clean, fast &amp; accessible</strong> websites and single-page
+                        applications — turning ambitious ideas into polished, production-ready
+                        interfaces with modern front-end craft.
                     </p>
-                    <p>I'm quiet confident, naturally curious, and perpetually working on
-                        improving my chops one design problem at a time.
-                    </p>
-                    <p>
-                        If I need to define myself in one sentence that would be a DataScience Student at I.M.Siences (Pakistan), a sports fanatic,
-                        photography enthusiast, and tech-obsessed!!!
-                    </p>
-                    <div class="btn-con">
-                        <a href="Resume.pdf" class="main-btn">
-                            <span class="btn-text">Download CV</span>
-                            <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    <div class="hero-cta reveal-up">
+                        <a href="#portfolio" class="btn btn-primary magnetic">
+                            <span>View My Work</span><i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="Resume.pdf" class="btn btn-ghost magnetic" download>
+                            <span>Download CV</span><i class="fa-solid fa-file-arrow-down"></i>
                         </a>
                     </div>
-                </div>
-                <div class="right-about">
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">17</p>
-                            <p class="small-text">Beginners Projects <br /> Completed</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">1+</p>
-                            <p class="small-text">Years of <br /> experience</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">3+</p>
-                            <p class="small-text">Participated in <br />Open source Projects </p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">2+</p>
-                            <p class="small-text">Times Joined<br />Hecktober Fest in ZTM Org. 2021 </p>
-                        </div>
+                    <div class="hero-socials reveal-up">
+                        <a href="https://github.com/Nassic-badar" target="_blank" rel="noopener" class="social-chip magnetic" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nassic-badar" target="_blank" rel="noopener" class="social-chip magnetic" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:badarnasic@gmail.com" class="social-chip magnetic" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <span class="hero-loc mono"><i class="fa-solid fa-location-dot"></i> Peshawar, Pakistan</span>
                     </div>
                 </div>
-            </div>
-            <div class="about-stats">
-                <h4 class="stat-title">My Skills</h4>
-                <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="prog-title">html5</p>
-                        <div class="progress-con">
-                            <p class="prog-text">90%</p>
-                            <div class="progress">
-                                <span class="html"></span>
-                            </div>
+
+                <div class="hero-visual" id="heroVisual">
+                    <div class="orbit orbit-1"></div>
+                    <div class="orbit orbit-2"></div>
+                    <div class="orbit orbit-3"></div>
+                    <div class="orbit-dot dot-1"><i class="fa-brands fa-react"></i></div>
+                    <div class="orbit-dot dot-2"><i class="fa-brands fa-js"></i></div>
+                    <div class="orbit-dot dot-3"><i class="fa-brands fa-node-js"></i></div>
+                    <div class="portrait-ring">
+                        <div class="portrait-frame">
+                            <img src="img/hero.png" alt="Portrait of Muhammad Nassic Badar" class="portrait" width="400" height="400">
                         </div>
                     </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">css3</p>
-                        <div class="progress-con">
-                            <p class="prog-text">90%</p>
-                            <div class="progress">
-                                <span class="css"></span>
-                            </div>
-                        </div>
+                    <div class="float-card float-card-1">
+                        <i class="fa-solid fa-code"></i>
+                        <div><strong>17+</strong><span>Projects Shipped</span></div>
                     </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">javascript</p>
-                        <div class="progress-con">
-                            <p class="prog-text">75%</p>
-                            <div class="progress">
-                                <span class="js"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">ReactJS</p>
-                        <div class="progress-con">
-                            <p class="prog-text">75%</p>
-                            <div class="progress">
-                                <span class="react"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">NodeJS</p>
-                        <div class="progress-con">
-                            <p class="prog-text">87%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Python</p>
-                        <div class="progress-con">
-                            <p class="prog-text">70%</p>
-                            <div class="progress">
-                                <span class="python"></span>
-                            </div>
-                        </div>
+                    <div class="float-card float-card-2">
+                        <i class="fa-solid fa-rocket"></i>
+                        <div><strong>1+ yr</strong><span>Experience</span></div>
                     </div>
                 </div>
             </div>
-            <h4 class="stat-title">My Timeline</h4>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2021</p>
-                    <h5>Web Developer<span> ZTM Org.</span></h5>
-                    <p>
-                        Achieved Complete web developer 2021 Certificate
-                    </p>
+
+            <a href="#about" class="scroll-cue" aria-label="Scroll to about">
+                <span class="mouse"><span class="wheel"></span></span>
+                <span class="mono">scroll</span>
+            </a>
+
+            <!-- Tech marquee -->
+            <div class="marquee" aria-hidden="true">
+                <div class="marquee-track" id="marqueeTrack">
+                    <span><i class="fa-brands fa-html5"></i>HTML5</span>
+                    <span><i class="fa-brands fa-css3-alt"></i>CSS3</span>
+                    <span><i class="fa-brands fa-js"></i>JavaScript</span>
+                    <span><i class="fa-brands fa-react"></i>React</span>
+                    <span><i class="fa-brands fa-node-js"></i>Node.js</span>
+                    <span><i class="fa-brands fa-python"></i>Python</span>
+                    <span><i class="fa-brands fa-git-alt"></i>Git</span>
+                    <span><i class="fa-brands fa-github"></i>GitHub</span>
                 </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2021</p>
-                    <h5>Bootstrap Developer<span> Coursera Org.</span></h5>
+            </div>
+        </header>
+
+        <!-- ══════════ ABOUT ══════════ -->
+        <section class="section container" id="about">
+            <div class="section-head">
+                <span class="section-tag mono">// 02 · about_me</span>
+                <h2 class="section-title">The person <span class="gradient-text">behind the pixels</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="glass about-card reveal-up">
+                    <h3 class="card-title"><i class="fa-solid fa-id-card"></i> Information</h3>
                     <p>
-                        Achieved Bootstrap developer certificate .
+                        I'm a very ambitious front-end developer looking for a role in an
+                        established IT company — with the opportunity to work with the latest
+                        technologies on challenging and diverse projects.
                     </p>
+                    <p>
+                        I'm quietly confident, naturally curious, and perpetually working on
+                        improving my craft one design problem at a time.
+                    </p>
+                    <p>
+                        One sentence? <strong>Data Science student at I.M.Sciences (Pakistan),
+                        sports fanatic, photography enthusiast, and tech-obsessed.</strong>
+                    </p>
+                    <a href="Resume.pdf" class="btn btn-primary magnetic" download>
+                        <span>Download CV</span><i class="fa-solid fa-download"></i>
+                    </a>
                 </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
+
+                <div class="stats-grid reveal-up">
+                    <div class="glass stat-tile">
+                        <span class="stat-num"><span class="counter" data-target="17">0</span><em>+</em></span>
+                        <span class="stat-label">Projects completed</span>
                     </div>
-                    <p class="tl-duration">2021</p>
-                    <h5>Web Designer<span> FreeCodeCamp Org.</span></h5>
-                    <p>
-                        Achieved Responsive web design certificate .
-                    </p>
+                    <div class="glass stat-tile">
+                        <span class="stat-num"><span class="counter" data-target="1">0</span><em>+</em></span>
+                        <span class="stat-label">Years experience</span>
+                    </div>
+                    <div class="glass stat-tile">
+                        <span class="stat-num"><span class="counter" data-target="3">0</span><em>+</em></span>
+                        <span class="stat-label">Open-source projects</span>
+                    </div>
+                    <div class="glass stat-tile">
+                        <span class="stat-num"><span class="counter" data-target="2">0</span><em>×</em></span>
+                        <span class="stat-label">Hacktoberfests · ZTM Org</span>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2021</p>
-                    <h5>JS Developer<span> FreeCodeCamp Org.</span></h5>
-                    <p>
-                        Achieved Data structure and Algorithem certificate in JavaScript .
-                    </p>
+            </div>
+
+            <div class="about-grid skills-row">
+                <div class="glass skills-card reveal-up">
+                    <h3 class="card-title"><i class="fa-solid fa-gauge-high"></i> Core Skills</h3>
+                    <div class="skill"><div class="skill-meta"><span>HTML5</span><span class="skill-pct mono" data-value="90">90%</span></div><div class="skill-track"><div class="skill-fill" data-value="90"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>CSS3</span><span class="skill-pct mono" data-value="90">90%</span></div><div class="skill-track"><div class="skill-fill" data-value="90"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>JavaScript</span><span class="skill-pct mono" data-value="75">75%</span></div><div class="skill-track"><div class="skill-fill" data-value="75"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>React.js</span><span class="skill-pct mono" data-value="75">75%</span></div><div class="skill-track"><div class="skill-fill" data-value="75"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>Node.js</span><span class="skill-pct mono" data-value="87">87%</span></div><div class="skill-track"><div class="skill-fill" data-value="87"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>Python</span><span class="skill-pct mono" data-value="70">70%</span></div><div class="skill-track"><div class="skill-fill" data-value="70"></div></div></div>
                 </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2021 - present</p>
-                    <h5>Data Science Degree<span> I.M.Sciences</span></h5>
-                    <p>
-                        Currently enrolled in Bachelors .
-                    </p>
+
+                <div class="glass timeline-card reveal-up">
+                    <h3 class="card-title"><i class="fa-solid fa-timeline"></i> Journey &amp; Milestones</h3>
+                    <ol class="timeline">
+                        <li class="tl-item"><span class="tl-dot"></span><span class="tl-year mono">2021</span><div class="tl-body"><h4>Web Developer <em>· ZTM Org</em></h4><p>Earned the Complete Web Developer 2021 certificate.</p></div></li>
+                        <li class="tl-item"><span class="tl-dot"></span><span class="tl-year mono">2021</span><div class="tl-body"><h4>Bootstrap Developer <em>· Coursera</em></h4><p>Earned the Bootstrap developer certificate.</p></div></li>
+                        <li class="tl-item"><span class="tl-dot"></span><span class="tl-year mono">2021</span><div class="tl-body"><h4>Web Designer <em>· freeCodeCamp</em></h4><p>Earned the Responsive Web Design certificate.</p></div></li>
+                        <li class="tl-item"><span class="tl-dot"></span><span class="tl-year mono">2021</span><div class="tl-body"><h4>JS Developer <em>· freeCodeCamp</em></h4><p>Earned the Data Structures &amp; Algorithms certificate in JavaScript.</p></div></li>
+                        <li class="tl-item"><span class="tl-dot current"></span><span class="tl-year mono">2021 → now</span><div class="tl-body"><h4>Data Science Degree <em>· I.M.Sciences</em></h4><p>Currently enrolled in a Bachelor's program.</p></div></li>
+                    </ol>
                 </div>
             </div>
         </section>
-        <section class="container" id="portfolio">
-            <div class="main-title">
-                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
+
+        <!-- ══════════ PORTFOLIO ══════════ -->
+        <section class="section container" id="portfolio">
+            <div class="section-head">
+                <span class="section-tag mono">// 03 · selected_work</span>
+                <h2 class="section-title">Things I've <span class="gradient-text">built &amp; shipped</span></h2>
+                <p class="section-sub">Practice projects and real builds across the front-end stack — hover any card to inspect, then dive into source or live demo.</p>
             </div>
-            <p class="port-text">
-                Here is some of my work that I've done using different Frontend Technologies.
-                These programs were built just for practice.
-            </p>
-            <div class="portfolios">
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port1.png" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/Nassic-badar/Smart-Brain/tree/master" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://nassic-badar.github.io/Smart-Brain/" class="icon">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port2.png" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/Nassic-badar/Css-Preloader" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://nassic-badar.github.io/Css-Preloader/" class="icon">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port3.png" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/Nassic-badar/Prettify" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://nassic-badar.github.io/Prettify/" class="icon">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port4.png" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/Nassic-badar/Restorante-Confusion" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://nassic-badar.github.io/Restorante-Confusion/" class="icon">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port5.png" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/Nassic-badar/Background-Generator" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://nassic-badar.github.io/Background-Generator/" class="icon">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port6.png" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/Nassic-badar/Robo-Friends/tree/master" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://nassic-badar.github.io/Robo-Friends/" class="icon">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port7.png" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/Nassic-badar/e-Commerce/tree/master" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://nassic-badar.github.io/e-Commerce/" class="icon">
-                                <i class="fa fa-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="filter-row reveal-up" id="filterRow" role="tablist" aria-label="Filter projects">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="react">React</button>
+                <button class="filter-btn" data-filter="css">CSS / Design</button>
+                <button class="filter-btn" data-filter="js">JavaScript</button>
             </div>
+
+            <div class="portfolio-grid" id="portfolioGrid"></div>
         </section>
-        <section class="container" id="blogs">
-            <div class="blogs-content">
-                <div class="main-title">
-                    <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
-                    <h4>Coming Soon</h4>
-                </div>
-                <div class="blogs">
-                    <div class="blog">
-                        <img src="img/port6.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                How to Create Your Own Website
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/blog1.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                How to Become an Expert in Web Design
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/blog2.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Become a Web Designer in 10 Days
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/blog3.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Debbuging made easy with Web Inspector
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/port7.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Get started with Web Design and UI Design
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/port3.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                This is what you need to know about Web Design
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                </div>
+
+        <!-- ══════════ BLOGS ══════════ -->
+        <section class="section container" id="blogs">
+            <div class="section-head">
+                <span class="section-tag mono">// 04 · writing</span>
+                <h2 class="section-title">Notes from <span class="gradient-text">the workbench</span></h2>
+                <p class="section-sub">Long-form writing on front-end craft is in the oven — here's what's queued up.</p>
             </div>
+            <div class="blogs-grid" id="blogsGrid"></div>
         </section>
-        <section class="container contact" id="contact">
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
-                </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        <h4>Contact me here</h4>
-                        <p>
-                            Have an idea you want to bring to life?
-                            Or you want to say hi?
-                            Why not send me a message?.
-                        </p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Location</span>
-                                </div>
-                                <p>
-                                    : Peshawar, Pakistan 
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
-                                <p>
-                                    <span>: badarnasic@gmail.com</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Mobile Number</span>
-                                </div>
-                                <p>
-                                    <span>: 03361046406</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span>Languages</span>
-                                </div>
-                                <p>
-                                    <span>: English, Urdu, Pushto</span>
-                                </p>
-                            </div>
-                        </div>
-<!--                         <div class="contact-icons">
-                            <div class="contact-icon">
-                                <a href="www.facebook.com" target="_blank">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div> -->
-                    </div>
-                    <div class="right-contact">
-                        <form action="" class="contact-form">
-                            <div class="input-control i-c-2">
-                                <input type="text" required placeholder="YOUR NAME">
-                                <input type="email" required placeholder="YOUR EMAIL">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" required placeholder="ENTER SUBJECT">
-                            </div>
-                            <div class="input-control">
-                                <textarea name="" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
-                            </div>
-                            <div class="submit-btn">
-                                <a href="#" class="main-btn" onclick=emailErr()>
-                                    <span class="btn-text">Submit</span>
-                                </a>
-                            </div>
-                        </form>
+
+        <!-- ══════════ CONTACT ══════════ -->
+        <section class="section container" id="contact">
+            <div class="section-head">
+                <span class="section-tag mono">// 05 · contact</span>
+                <h2 class="section-title">Let's build something <span class="gradient-text">great</span></h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="glass contact-info reveal-up">
+                    <h3 class="card-title"><i class="fa-solid fa-satellite-dish"></i> Open a channel</h3>
+                    <p class="contact-lede">Have an idea you want to bring to life? Or just want to say hi? My inbox is open.</p>
+                    <ul class="contact-list">
+                        <li><div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div><div><span class="ci-label">Location</span><a href="https://maps.google.com/?q=Peshawar" target="_blank" rel="noopener">Peshawar, Pakistan</a></div></li>
+                        <li><div class="ci-icon"><i class="fa-solid fa-envelope"></i></div><div><span class="ci-label">Email</span><a href="mailto:badarnasic@gmail.com">badarnasic@gmail.com</a></div></li>
+                        <li><div class="ci-icon"><i class="fa-solid fa-phone"></i></div><div><span class="ci-label">Phone</span><a href="tel:+923361046406">0336-1046406</a></div></li>
+                        <li><div class="ci-icon"><i class="fa-solid fa-language"></i></div><div><span class="ci-label">Languages</span><span class="ci-value">English · Urdu · Pashto</span></div></li>
+                    </ul>
+                    <div class="contact-socials">
+                        <a href="https://github.com/Nassic-badar" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nassic-badar" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:badarnasic@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                     </div>
                 </div>
+
+                <form class="glass contact-form reveal-up" id="contactForm" novalidate>
+                    <h3 class="card-title"><i class="fa-solid fa-paper-plane"></i> Send a message</h3>
+                    <div class="form-row">
+                        <label class="field"><input type="text" name="name" placeholder="Your name" required autocomplete="name"></label>
+                        <label class="field"><input type="email" name="email" placeholder="Your email" required autocomplete="email"></label>
+                    </div>
+                    <label class="field"><input type="text" name="subject" placeholder="Subject" required></label>
+                    <label class="field"><textarea name="message" rows="5" placeholder="Your message…" required></textarea></label>
+                    <button type="submit" class="btn btn-primary btn-block magnetic" id="submitBtn">
+                        <span class="btn-label">Transmit Message</span><i class="fa-solid fa-rocket"></i>
+                    </button>
+                    <p class="form-note mono">encrypted vibe · powered by formsubmit</p>
+                </form>
             </div>
         </section>
     </main>
 
-    <div class="controls">
-        <div class="control active-btn" data-id="home" >
-            <i class="fas fa-home"></i>
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <a href="#home" class="logo"><span class="logo-mark">N</span><span class="logo-text">nassic<em>.dev</em></span></a>
+            <p class="footer-copy">© <span id="footerYear"></span> Muhammad Nassic Badar. Crafted with caffeine &amp; semicolons.</p>
+            <a href="#home" class="to-top magnetic" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="blogs">
-            <i class="far fa-newspaper"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
-        </div>
-    </div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
